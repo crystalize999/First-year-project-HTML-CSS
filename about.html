@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Wanderlust Journeys - Про нас</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <style>
+      .fixed-navbar {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 9999;
+        height: 60px; 
+      }
+      body {
+        margin: 0;
+        padding-top: 0px; 
+      }
+      .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+      }
+      .container-inner {
+        text-align: center;
+        max-width: 800px; 
+        padding: 0 20px; 
+        margin-bottom: 100px; 
+      }
+      .shadow-text {
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+      }
+      .animated-text {
+        animation: moveIn 1s ease-in-out forwards;
+        opacity: 0;
+      }
+      @keyframes moveIn {
+        0% {
+          transform: translateY(-50px);
+          opacity: 0;
+        }
+        100% {
+          transform: translateY(0);
+          opacity: 1;
+        }
+      }
+
+      .contact-form {
+        margin-top: 50px;
+      }
+      .contact-form h2 {
+        margin-bottom: 20px;
+      }
+      .contact-form form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .contact-form input,
+      .contact-form textarea {
+        margin-bottom: 10px;
+        padding: 10px;
+        width: 300px;
+      }
+      .contact-form button {
+        padding: 10px 20px;
+        background-color: #333;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+      }
+
+      .map-container {
+        margin-top: 50px;
+      }
+      .map-container h2 {
+        margin-bottom: 20px;
+      }
+      .map-container .office-info {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        margin-top: 20px;
+      }
+      .map-container .office-info .address {
+        flex: 1;
+        text-align: left;
+      }
+      .map-container .office-info .address h3 {
+        margin-bottom: 10px;
+      }
+      .map-container .office-info .address p {
+        margin-bottom: 5px;
+      }
+      .map-container .office-info .directions {
+        flex: 1;
+        text-align: right;
+      }
+      .map-container img {
+        max-width: 100%;
+        height: auto;
+        margin-top: 20px;
+        border-radius: 10px;
+        box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+      }
+
+      .testimonial-container {
+        margin-top: 50px;
+      }
+      .testimonial-container h2 {
+        margin-bottom: 20px;
+      }
+      .testimonial-container .testimonial {
+        margin-bottom: 30px;
+        padding: 20px;
+        border-radius: 10px;
+        background-color: #f1f1f1;
+        box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+      }
+      .testimonial-container .testimonial .author {
+        font-weight: bold;
+        margin-bottom: 5px;
+      }
+      .testimonial-container .testimonial .text {
+        font-style: italic;
+      }
+    </style>
+    <script>
+      window.addEventListener("scroll", function () {
+        var header = document.querySelector("header");
+        if (window.pageYOffset > header.offsetTop) {
+          header.classList.add("fixed-navbar");
+        } else {
+          header.classList.remove("fixed-navbar");
+        }
+      });
+    </script>
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <img src="/photos/logo.png" alt="Логотип" />
+        <div class="navbar">
+          <p class="slogan">Досліджуйте світ, приймайте пригоди!</p>
+        </div>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Головна</a></li>
+          <li><a href="travel.html">Подорожі</a></li>
+          <li><a href="about.html">Про нас</a></li>
+          <li><a href="contacts.html">Контакти</a></li>
+        </ul>
+      </nav>
+    </header>
+    <div class="container">
+      <div class="container-inner">
+        <h1 class="shadow-text animated-text">Про нас</h1>
+        <p class="animated-text">
+          Ми команда ентузіастів, які люблять подорожувати та ділитися своїми
+          пригодами. Наша мета - надихнути людей і допомогти їм відкрити для
+          себе нові місця та культури.
+        </p>
+        <p class="animated-text">
+          Ми пропонуємо широкий спектр турів та подорожей, включаючи екскурсії,
+          гірські походи, пляжні відпочинки та багато іншого. Наша команда досвідчених
+          гідів та мандрівників з радістю поділиться своїми знаннями та досвідом
+          з вами.
+        </p>
+        <h2 class="shadow-text animated-text">Наші цінності</h2>
+        <ul class="animated-text">
+          <li>Пристрасть до подорожей</li>
+          <li>Якість обслуговування</li>
+          <li>Безпека клієнтів</li>
+          <li>Повага до культурних відмінностей</li>
+          <li>Відповідальність перед природою та навколишнім середовищем</li>
+        </ul>
+        <h2 class="shadow-text animated-text">Контакти</h2>
+        <p class="animated-text">
+          Ми завжди готові відповісти на ваші запитання та допомогти вам з плануванням
+          подорожі.
+        </p>
+        <p class="animated-text">Телефон: +1 123-456-7890</p>
+        <p class="animated-text">Email: info@example.com</p>
+
+        <div class="testimonial-container">
+          <h2>Відгуки</h2>
+          <div class="testimonial">
+            <p class="text">
+              "Чудова компанія з подорожей! Вони організували незабутню
+              гірську похід із чудовими гідами. Рекомендую!"
+            </p>
+            <p class="author">- Іван</p>
+          </div>
+          <div class="testimonial">
+            <p class="text">
+              "Дуже задоволений сервісом Wanderlust Journeys. Подорож на
+              тропічний острів була досить комфортною та цікавою. Обов'язково
+              звернусь до них знову!"
+            </p>
+            <p class="author">- Марія</p>
+          </div>
+          <div class="testimonial">
+            <p class="text">
+              "Подорожі з Wanderlust Journeys стали для мене справжнім
+              відкриттям. Дуже професійна команда та неймовірні враження.
+              Рекомендую всім подорожувати з ними!"
+            </p>
+            <p class="author">- Петро</p>
+          </div>
+        </div>
+
+
+          <div class="map-container">
+            <h2>Наш офіс</h2>
+            <div class="office-info">
+              <div class="address">
+                <h3>Адреса</h3>
+                <p>ул. Перемоги, 123</p>
+                <p>Київ, Україна</p>
+              </div>
+              <div class="directions">
+                <h3>Як дістатися?</h3>
+                <p>
+                  Дотримуйтесь вулиці Героїв до перехрестя з вулицею Перемоги.
+                  Потім поверніть праворуч і наш офіс перебуватиме через 2
+                  блоку зліва.
+                </p>
+              </div>
+            </div>
+            <div>
+              <img
+                src="https://amiel.club/uploads/posts/2022-10/1665184517_2-amiel-club-p-ofis-primeri-dizaina-dizain-vkontakte-2.jpg"
+                alt="Наш офіс"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    <footer>
+      <p>© 2023 Wanderlust Journeys. Усі права захищені.</p>
+    </footer>
+  </body>
+</html>

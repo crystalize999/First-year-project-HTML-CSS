@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Wanderlust Journeys - Подорожі</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <style>
+      
+      .travel-page {
+        padding: 40px;
+        text-align: center; 
+      }
+
+      .travel-page h2 {
+        font-size: 24px;
+        color: #333;
+        margin-bottom: 20px;
+      }
+
+      .travel-page p {
+        font-size: 16px;
+        line-height: 1.5;
+        color: #666;
+        margin-bottom: 15px;
+      }
+
+      .travel-page .image {
+        margin-bottom: 20px;
+        display: flex; 
+        justify-content: center;
+      }
+
+      .travel-page .image img {
+        width: 200px; 
+        margin: 10px;
+      }
+
+      
+      .fixed-navbar {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 9999;
+        height: 60px; 
+      }
+    </style>
+    <script>
+      window.addEventListener("scroll", function () {
+        var header = document.querySelector("header");
+        if (window.pageYOffset > header.offsetTop) {
+          header.classList.add("fixed-navbar");
+        } else {
+          header.classList.remove("fixed-navbar");
+        }
+      });
+    </script>
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <img src="/photos/logo.png" alt="Логотип" />
+        <div class="navbar">
+          <p class="slogan">Досліджуйте світ, приймайте пригоди!</p>
+        </div>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Головна</a></li>
+          <li><a href="travel.html">Подорожі</a></li>
+          <li><a href="about.html">Про нас</a></li>
+          <li><a href="contacts.html">Контакти</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="travel-page">
+      <h2>Ласкаво просимо у світ пригод та відкриттів!</h2>
+      <p>
+        Wanderlust Journeys – це ваш провідник у світі подорожей. Ми
+        пропонуємо незабутні тури та екскурсії найпрекраснішими куточками
+        планети. Відкрийте для себе дивовижні природні ландшафти, пориньте
+        в культуру та традиції різних народів, насолоджуйтеся чудовими пляжами
+        та чудовою гастрономією.
+      </p>
+      <div class="image">
+        <img src="/photosTrevel/time-to-travel.jpg" alt="Путешествие 1" />
+        <img src="/photosTrevel/AdobeStock_429797238-1600x1072.jpeg" alt="Путешествие 2" />
+        <img src="/photosTrevel/1.jpg" alt="Путешествие 3" />
+        <img src="/photosTrevel/7bb3e15e5eba99a261667bb65b4f66238063de4e.webp" alt="Путешествие 4" />
+        <img src="/photosTrevel/depositphotos_25565783-stock-photo-young-party-people.jpg" alt="Путешествие 5" />
+        <img src="/photosTrevel/tour-med-new-way.png" alt="Путешествие 6" />
+      </div>
+      <p>
+        Наша команда досвідчених гідів та організаторів турів зробить ваше
+        подорож незабутньою. Ми пропонуємо індивідуальні маршрути,
+        враховуючи ваші уподобання та інтереси. Ви можете вибрати відпочинок на пляжі,
+        альпінізм у горах, культурні тури, оздоровчі програми та багато чого
+        інше.
+      </p>
+      <div class="image">
+        <img src="/photosTrevel/1370335269-1.jpg" alt="Путешествие 7" />
+        <img src="/photosTrevel/cxl4j1h5393899.jpg" alt="Путешествие 8" />
+        <img src="/photosTrevel/245252-1200.jpg" alt="Путешествие 9" />
+        <img src="/photosTrevel/16310168336137578111a9e_yevropa_693x433.jpg" alt="Путешествие 10" />
+      </div>
+      <p>
+        Ми також надаємо повний спектр послуг: бронювання готелів та
+        житла, транспортне обслуговування, екскурсії з гідом, страхування
+        мандрівників та цілодобову клієнтську підтримку. Ми дбаємо про
+        вашому комфорті та безпеці, щоб ви могли насолодитися кожним
+        миттю своєї подорожі.
+      </p>
+      <div class="image">
+        <img src="/photosTrevel/88c7716d3339222aca1104f8314572af.jpg" alt="Путешествие 11" />
+        <img src="https://s0.rbk.ru/v6_top_pics/media/img/7/58/756130602725587.jpg" alt="Путешествие 12" />
+        <img src="https://eimg.pravda.com/images/doc/2/d/2d87e03------.jpg" alt="Путешествие 13" />
+      </div>
+      <p>
+        Ми впевнені, що кожна подорож має бути унікальною та
+        запам'ятовується. Тому ми створюємо тури, які відповідають вашим
+        очікуванням і перевершують їх. Вирушайте у захоплюючу подорож з
+        Wanderlust Journeys та відкрийте для себе нові горизонти!
+      </p>
+    </div>
+    <footer>
+        <p>© 2023 Wanderlust Journeys. Усі права захищені.</p>
+      </footer>
+  </body>
+</html>

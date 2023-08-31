@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Wanderlust Journeys</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <style>
+      
+      .fixed-navbar {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 9999;
+        
+      }
+    </style>
+    <script>
+      window.addEventListener("scroll", function () {
+        var header = document.querySelector("header");
+        if (window.pageYOffset > header.offsetTop) {
+          header.classList.add("fixed-navbar");
+        } else {
+          header.classList.remove("fixed-navbar");
+        }
+      });
+    </script>
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <img src="/photos/logo.png" alt="Логотип" />
+        <div class="navbar">
+          <p class="slogan">Досліджуйте світ, приймайте пригоди!</p>
+        </div>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Головна</a></li>
+          <li><a href="travel.html">Подорожі</a></li>
+          <li><a href="about.html">Про нас</a></li>
+          <li><a href="contacts.html">Контакти</a></li>
+        </ul>
+      </nav>
+    </header>
+    <section class="banner-section">
+      <div class="banner-image">
+        <img src="/photos/photo_2023-05-24_14-17-03.jpg" alt="Изображение" />
+        <div class="banner-content">
+          <h1>Ласкаво просимо на наш туристичний сайт</h1>
+          <p>
+            Тут ви знайдете інформацію про найкращі напрямки та пригоди по всьому світу.
+          </p>
+          <h2>Що ми робимо?</h2>
+          <p>
+            Wanderlust Journeys спеціалізується на створенні незабутніх подорожей для наших клієнтів. Незалежно від того, чи шукаєте ви спокійний пляжний відпочинок, авантюрну подорож через гори чи культурне занурення в жваве місто, у нас є ідеальний туристичний пакет для вас.
+          </p>
+          <h2>Наші Послуги</h2>
+          <ul>
+            <li>Індивідуальні маршрути подорожей</li>
+            <li>Бронювання готелів та житла</li>
+            <li>Організація транспорту</li>
+            <li>Екскурсії та розваги з гідом</li>
+            <li>Страхування подорожей</li>
+            <li>Клієнтська підтримка 24/7</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="gallery">
+      <h2>Наша галерея:</h2>
+      <div class="image">
+        <img src="/photos/574c6130b3df61j.jpg" alt="Зображення 1" />
+      </div>
+      <div class="image">
+        <img src="/photos/884528-Church-Kiev-Ukraine.jpg" alt="Зображення 2" />
+      </div>
+      <div class="image">
+        <img src="/photos/Sunrise-on-the-Matterhorn.jpg" alt="Зображення 3" />
+      </div>
+      <div class="image">
+        <img src="/photos/Без названия.jpg" alt="Зображення 4" />
+      </div>
+      <div class="image">
+        <img src="/photos/Venice-1024x571.jpg" alt="Зображення 5" />
+      </div>
+      <div class="image">
+        <img src="/photos/b7c37de0.jpg" alt="Зображення 6" />
+      </div>
+      <div class="image">
+        <img src="/photos/17738125_605.jpg" alt="Зображення 7" />
+      </div>
+      <div class="image">
+        <img src="/photos/news_file_5328_5c483e9829b0e.jpg" alt="Зображення 8" />
+      </div>
+    </section>
+
+    <footer>
+      <p>© 2023 Wanderlust Journeys. Усі права захищені.</p>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Wanderlust Journeys - Контакти</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <style>
+      
+      .fixed-navbar {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 9999;
+        height: 60px; 
+      }
+
+      .contact-form {
+        margin-top: 50px;
+      }
+      .contact-form h2 {
+        margin-bottom: 20px;
+      }
+      .contact-form form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .contact-form input,
+      .contact-form textarea {
+        margin-bottom: 10px;
+        padding: 10px;
+        width: 300px;
+      }
+      .contact-form button {
+        padding: 10px 20px;
+        background-color: #333;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+      }
+
+    
+      .carousel-container {
+        display: flex;
+        overflow: hidden;
+      }
+
+      .carousel-image {
+        display: flex;
+        width: 400px;
+        border-radius: 10%;
+      }
+
+      .carousel-controls {
+        margin-top: 10px;
+        display: flex;
+        justify-content: center;
+        gap: 10px; 
+      }
+
+      .prev-btn,
+      .next-btn {
+        padding: 10px;
+        background-color: #000;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+        font-size: 24px;
+      }
+    </style>
+    <script>
+      window.addEventListener("scroll", function () {
+        var header = document.querySelector("header");
+        if (window.pageYOffset > header.offsetTop) {
+          header.classList.add("fixed-navbar");
+        } else {
+          header.classList.remove("fixed-navbar");
+        }
+      });
+    </script>
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <img src="/photos/logo.png" alt="Логотип" />
+        <div class="navbar">
+          <p class="slogan">Досліджуйте світ, приймайте пригоди!</p>
+        </div>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Головна</a></li>
+          <li><a href="travel.html">Подорожі</a></li>
+          <li><a href="about.html">Про нас</a></li>
+          <li><a href="contacts.html">Контакти</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section>
+      <div class="container">
+        <h1>Контакти</h1>
+        <p>
+          Ми будемо раді відповісти на ваші запитання та надати додаткову інформацію про наші послуги. Зв'яжіться з нами
+          за наведеними нижче контактними даними або заповніть форму зворотного зв'язку. Ми постараємося зв'язатися з вами в
+          Найближчим часом.
+        </p>
+
+        <div class="carousel">
+          <div class="carousel-container">
+            <img src="https://infotell.ru/upload/sites/call-center_960.jpg" alt="Image 1" class="carousel-image" />
+            <img src="https://img.poehalisnami.ua/ContentData/Img/kak-otkrit-agentstvo1.jpeg" alt="Image 2" class="carousel-image" />
+            <img src="https://tat.ua/wp-content/uploads/7429dd97828c18230e74f355a6ce2247-thumb-880x0-o.jpg" alt="Image 3" class="carousel-image" />
+          </div>
+          <div class="carousel-controls">
+            <button class="prev-btn">&#8249;</button>
+            <button class="next-btn">&#8250;</button>
+          </div>
+        </div>
+
+        <div class="contact-details">
+          <h2>Контактна інформація</h2>
+          <p>Телефон: +1234567890</p>
+          <p>Email: info@wanderlustjourneys.com</p>
+          <p>Адреса: ул. Перемоги 123, Київ, Україна</p>
+        </div>
+
+        <div class="contact-form">
+          <h2>Зв'яжіться з нами</h2>
+          <form>
+            <input type="text" name="name" placeholder="Ваше имя" required />
+            <input type="email" name="email" placeholder="Ваша електронна пошта" required />
+            <textarea name="message" placeholder="Ваше повідомлення" required></textarea>
+            <button type="submit">Відправити</button>
+          </form>
+        </div>
+      </div>
+    </section>
+    <script>
+        window.addEventListener("load", function () {
+          const images = document.querySelectorAll(".carousel-image");
+          let slideIndex = 0;
+  
+          function showSlide(index) {
+
+            images.forEach(function (image) {
+              image.style.display = "none";
+            });
+  
+            images[index].style.display = "block";
+          }
+  
+          function nextSlide() {
+            slideIndex++;
+            if (slideIndex >= images.length) {
+              slideIndex = 0;
+            }
+            showSlide(slideIndex);
+          }
+  
+          function prevSlide() {
+            slideIndex--;
+            if (slideIndex < 0) {
+              slideIndex = images.length - 1; 
+            }
+            showSlide(slideIndex);
+          }
+
+          const prevBtn = document.querySelector(".prev-btn");
+          const nextBtn = document.querySelector(".next-btn");
+          prevBtn.addEventListener("click", prevSlide);
+          nextBtn.addEventListener("click", nextSlide);
+  
+          showSlide(slideIndex);
+        });
+      </script>
+  
+
+    <footer>
+      <p>© 2023 Wanderlust Journeys. Усі права захищені.</p>
+    </footer>
+  </body>
+</html>
